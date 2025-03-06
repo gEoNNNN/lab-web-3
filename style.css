@@ -44,9 +44,8 @@ nav ul li a:hover {
 
 .cup {
     position: fixed;
-    margin-left: 45vw;
-    margin-top: 5vh;
-    left: 50%;
+    margin-left: 0;
+    margin-top: 80vh;
     transform: translate(-50%, -50%);
     width: 4vw; /* Further reduced width */
     height: 5vw; /* Further reduced height */
@@ -83,6 +82,31 @@ nav ul li a:hover {
     border-radius: 50%;
     top: 2vw; /* Adjust eye position */
 }
+
+/* Tooltip (welcome message) */
+.tooltip {
+    margin-left: 2vw;
+    position: absolute;
+    bottom: 110%; /* Position above the cup */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.5vw 1vw;
+    font-size: 0.8vw;
+    border-radius: 0.5vw;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show tooltip on hover */
+.cup:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
 
 .eye.left {
     left: 1vw;
@@ -423,6 +447,13 @@ footer {
 }
 
 @media screen and (max-width: 1000px) {
+
+    .cup {
+        position: absolute;
+        margin-left: 94vw;
+        margin-top: 2vh;
+    }
+
     .timeline {
         margin: 2vh auto;
     }

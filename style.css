@@ -43,7 +43,7 @@ nav ul li a:hover {
 }
 
 .cup {
-    position: absolute;
+    position: fixed;
     margin-left: 45vw;
     margin-top: 5vh;
     left: 50%;
@@ -73,6 +73,25 @@ nav ul li a:hover {
     border-top-right-radius: 1.2vw;
     border-bottom-right-radius: 1.2vw;
 }
+
+
+.eye {
+    position: absolute;
+    width: 0.6vw;
+    height: 0.8vw;
+    background: black;
+    border-radius: 50%;
+    top: 2vw; /* Adjust eye position */
+}
+
+.eye.left {
+    left: 1vw;
+}
+
+.eye.right {
+    left: 2.4vw;
+}
+
 
 @keyframes filling {
     50% {background-position: 1000px 0px;}

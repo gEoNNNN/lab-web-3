@@ -381,3 +381,17 @@ footer {
     
 
 }
+
+
+@media screen and (max-width: 650px) {
+
+    .home-content{
+        margin-top: 5vh;
+    }
+
+    .coffee-content ul li h2,h3 {
+        margin-top: 0vh;
+    }
+
+}
+

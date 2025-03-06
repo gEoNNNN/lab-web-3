@@ -42,6 +42,49 @@ nav ul li a:hover {
     color: #ffcc00;
 }
 
+.cup {
+    position: absolute;
+    margin-left: 45vw;
+    margin-top: 5vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4vw; /* Further reduced width */
+    height: 5vw; /* Further reduced height */
+    border: 0.2vw solid #6F4E37; /* Thinner border */
+    border-top: 0.1vw solid transparent;
+    border-radius: 0.5vw;
+    border-top-left-radius: 0.2vw;
+    border-top-right-radius: 0.2vw;
+    background: url(./assets/wave.png);
+    background-position: 0px 350px;
+    background-repeat: repeat-x;
+    animation: filling 6s ease-in-out infinite;
+    box-shadow: 0 0 0 0.2vw #fff, 0 0.8vw 1.5vw rgba(0,0,0,1);
+}
+
+.cup:before {
+    content: '';
+    position: absolute;
+    width: 1.5vw; /* Smaller handle */
+    height: 2.5vw; /* Smaller height */
+    border: 0.2vw solid #fff; /* Thinner border */
+    right: -2vw; /* Adjusted position */
+    top: 1vw; /* Adjusted position */
+    border-top-right-radius: 1.2vw;
+    border-bottom-right-radius: 1.2vw;
+}
+
+@keyframes filling {
+    50% {background-position: 1000px 0px;}
+    100% {background-position: 2000px 350px;}
+}
+
+@keyframes tiltCup {
+    0%, 50% { transform: translate(-50%, -50%) rotate(0deg); } /* Normal position */
+    55%, 95% { transform: translate(-50%, -50%) rotate(-50deg); } /* Tilted position */
+    100% { transform: translate(-50%, -50%) rotate(0deg); } /* Back to normal */
+}
+
 #home img {
     width: 80vw;
     height: 40vw;

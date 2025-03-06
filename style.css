@@ -336,5 +336,48 @@ footer {
         margin-top: 5vh;
     }
 
+    .coffee-content ul li h2 {
+        font-size: 1vw ;
+    }
+    .coffee-content ul li h2,h3 {
+        margin-top: 1vh;
+    }
+
+    .coffee-content ul li h3 {
+        font-size: 1.5vw;
+    }
+    .coffee-content ul li h1 {
+        font-size: 2vw;
+    }
+
+    .contact {
+        margin-bottom: 3vh;
+    }
+    
+    .contact h1 {
+        margin: 1vh;
+        margin-left: 12vw;
+    }
+    
+    .contact h2 {
+        margin-top: 1vh;
+        margin-left: 12vw;
+        font-family: Montserrat;
+        font-size: 1.2vw;
+    }
+    .contact h3 {
+        margin-top: 1vh;
+        margin-left: 12vw;
+    }
+    
+    .email,.phone {
+        font-family: Caladea;
+        font-weight: 800;
+        text-align: left;
+        font-size: 1.2vw;
+        margin: 1vh;
+        margin-left: 12vw;
+    }
+    
 
 }

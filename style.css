@@ -42,6 +42,92 @@ nav ul li a:hover {
     color: #ffcc00;
 }
 
+.cup {
+    position: fixed;
+    margin-left: 0;
+    margin-top: 80vh;
+    transform: translate(-50%, -50%);
+    width: 4vw; /* Further reduced width */
+    height: 5vw; /* Further reduced height */
+    border: 0.2vw solid #6F4E37; /* Thinner border */
+    border-top: 0.1vw solid transparent;
+    border-radius: 0.5vw;
+    border-top-left-radius: 0.2vw;
+    border-top-right-radius: 0.2vw;
+    background: url(./assets/wave.png);
+    background-position: 0px 350px;
+    background-repeat: repeat-x;
+    animation: filling 6s ease-in-out infinite;
+    box-shadow: 0 0 0 0.2vw #fff, 0 0.8vw 1.5vw rgba(0,0,0,1);
+}
+
+.cup:before {
+    content: '';
+    position: absolute;
+    width: 1.5vw; /* Smaller handle */
+    height: 2.5vw; /* Smaller height */
+    border: 0.2vw solid #fff; /* Thinner border */
+    right: -2vw; /* Adjusted position */
+    top: 1vw; /* Adjusted position */
+    border-top-right-radius: 1.2vw;
+    border-bottom-right-radius: 1.2vw;
+}
+
+
+.eye {
+    position: absolute;
+    width: 0.6vw;
+    height: 0.8vw;
+    background: black;
+    border-radius: 50%;
+    top: 2vw; /* Adjust eye position */
+}
+
+/* Tooltip (welcome message) */
+.tooltip {
+    margin-left: 2vw;
+    position: absolute;
+    bottom: 110%; /* Position above the cup */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.5vw 1vw;
+    font-size: 0.8vw;
+    border-radius: 0.5vw;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show tooltip on hover */
+.cup:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.eye.left {
+    left: 1vw;
+}
+
+.eye.right {
+    left: 2.4vw;
+}
+
+
+@keyframes filling {
+    50% {background-position: 1000px 0px;}
+    100% {background-position: 2000px 350px;}
+}
+
+@keyframes tiltCup {
+    0%, 50% { transform: translate(-50%, -50%) rotate(0deg); } /* Normal position */
+    55%, 95% { transform: translate(-50%, -50%) rotate(-50deg); } /* Tilted position */
+    100% { transform: translate(-50%, -50%) rotate(0deg); } /* Back to normal */
+}
+
 #home img {
     width: 80vw;
     height: 40vw;
@@ -361,6 +447,13 @@ footer {
 }
 
 @media screen and (max-width: 1000px) {
+
+    .cup {
+        position: absolute;
+        margin-left: 94vw;
+        margin-top: 2vh;
+    }
+
     .timeline {
         margin: 2vh auto;
     }

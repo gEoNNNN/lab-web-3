@@ -251,6 +251,64 @@ nav ul li a:hover {
     height: 40vw;
 }
 
+
+
+#coffee-membership {
+    display: none; /* Hidden by default */
+    text-align: center;
+    background-color: #f8f1e5;
+    padding: 5vh 5vw;
+    border-radius: 2vw;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#coffee-membership h2 {
+    font-family: 'Caladea', serif;
+    font-size: 5vw;
+    font-weight: 800;
+    color: #3e2723;
+    margin-bottom: 1vh;
+}
+
+#coffee-membership p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5vw;
+    color: #3e2723;
+    margin-bottom: 3vh;
+}
+
+.membership-options {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.membership-card {
+    background-color: white;
+    padding: 3vh;
+    border-radius: 2vw;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.membership-card h3 {
+    font-size: 4vw;
+    font-weight: bold;
+    color: #006241;
+}
+
+.membership-card p {
+    font-size: 3vw;
+    color: #3e2723;
+}
+
+@media screen and (max-width: 768px) {
+    #coffee-membership {
+        display: block;
+    }
+}
+
+
 footer {
     background: #6f4e37;
     color: white;
@@ -381,7 +439,6 @@ footer {
     
 
 }
-
 
 @media screen and (max-width: 650px) {
 
